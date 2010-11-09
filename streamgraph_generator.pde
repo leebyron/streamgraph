@@ -33,8 +33,9 @@ void setup() {
   noLoop();
 
   // GENERATE DATA
-  data     = new LateOnsetDataSource();
+  //data     = new LateOnsetDataSource();
   //data     = new BelievableDataSource();
+  data     = new TweetDataSource(this, "data/tweetdata.csv");
 
   // ORDER DATA
   ordering = new LateOnsetSort();
