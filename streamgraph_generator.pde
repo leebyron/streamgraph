@@ -14,10 +14,10 @@ boolean     isGraphCurved = true; // catmull-rom interpolation
 int         seed          = 28;   // random seed
 
 float       DPI           = 300;
-float       widthInches   = 8.0;
-float       heightInches  = 4.0;
-int         numLayers     = 26;
-int         layerSize     = 1157;
+float       widthInches   = 3.5;
+float       heightInches  = 0.7;
+int         numLayers     = 50;
+int         layerSize     = 100;
 
 DataSource  data;
 LayerLayout layout;
@@ -35,7 +35,7 @@ void setup() {
   // GENERATE DATA
   //data     = new LateOnsetDataSource();
   //data     = new BelievableDataSource();
-  data     = new TweetDataSource(this, "data/teapartyconcordance.csv");
+  data     = new CSVDataSource(this, "data/csvdata.csv");
 
   // ORDER DATA
   ordering = new LateOnsetSort();
@@ -45,14 +45,14 @@ void setup() {
   //ordering = new NoLayerSort();
 
   // LAYOUT DATA
-  //layout   = new StreamLayout();
+  layout   = new StreamLayout();
   //layout   = new MinimizedWiggleLayout();
   //layout   = new ThemeRiverLayout();
-  layout   = new StackLayout();
+  //layout   = new StackLayout();
 
   // COLOR DATA
-  //coloring = new LastFMColorPicker(this, "layers-nyt.jpg");
-  coloring = new LastFMColorPicker(this, "layers.jpg");
+  coloring = new LastFMColorPicker(this, "layers-nyt.jpg");
+  //coloring = new LastFMColorPicker(this, "layers.jpg");
   //coloring = new RandomColorPicker(this);
 
   //=========================================================================

@@ -2,7 +2,7 @@ import java.util.*;
 import processing.core.*;
 
 /**
- * TweetDataSource
+ * CSVDataSource
  * Read data from a CSV file.
  * Each Layer corresponds to one line, with the first entry in the line the name of the layer.
  * Assumes every line is the same length.
@@ -12,11 +12,11 @@ import processing.core.*;
  * @author Lee Byron
  * @author Martin Wattenberg
  */
-public class TweetDataSource implements DataSource {
+public class CSVDataSource implements DataSource {
 
   public String[] data;
 
-  public TweetDataSource(PApplet parent, String filename) {
+  public CSVDataSource(PApplet parent, String filename) {
     data = parent.loadStrings(filename);
   }
 
