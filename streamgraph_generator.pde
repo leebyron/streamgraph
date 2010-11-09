@@ -38,8 +38,8 @@ void setup() {
   data     = new TweetDataSource(this, "data/tweetdata.csv");
 
   // ORDER DATA
-  ordering = new LateOnsetSort();
-  //ordering = new VolatilitySort();
+  //ordering = new LateOnsetSort();
+  ordering = new VolatilitySort();
   //ordering = new InverseVolatilitySort();
   //ordering = new BasicLateOnsetSort();
   //ordering = new NoLayerSort();
@@ -51,8 +51,8 @@ void setup() {
   //layout   = new StackLayout();
 
   // COLOR DATA
-  coloring = new LastFMColorPicker(this, "layers-nyt.jpg");
-  //coloring = new LastFMColorPicker(this, "layers.jpg");
+  //coloring = new LastFMColorPicker(this, "layers-nyt.jpg");
+  coloring = new LastFMColorPicker(this, "layers.jpg");
   //coloring = new RandomColorPicker(this);
 
   //=========================================================================

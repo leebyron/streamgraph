@@ -3,7 +3,10 @@ import processing.core.*;
 
 /**
  * TweetDataSource
- * Create test data for layout engine.
+ * Read data from a CSV file.
+ * Each Layer corresponds to one line, with the first entry in the line the name of the layer.
+ * Assumes every line is the same length.
+ * Ignores the parameters given to make.
  *
  * @author Albert Sun
  * @author Lee Byron
@@ -12,51 +15,33 @@ import processing.core.*;
 public class TweetDataSource implements DataSource {
 
   public String[] data;
-  public Random rnd;
-
-  public TweetDataSource(int seed) {
-    rnd = new Random(seed);
-  }
 
   public TweetDataSource(PApplet parent, String filename) {
-      this(2);
-      data = parent.loadStrings(filename);
-      parent.println(data[0]);
+    data = parent.loadStrings(filename);
   }
 
   public Layer[] make(int numLayers, int sizeArrayLength) {
+    numLayers = data.length;
     Layer[] layers = new Layer[numLayers];
 
     for (int i = 0; i < numLayers; i++) {
-      String name   = "Layer #" + i;
-      float[] size  = new float[sizeArrayLength];
-      size          = makeRandomArray(sizeArrayLength);
-      layers[i]     = new Layer(name, size);
+      String[] fields  = data[i].split(",");
+      sizeArrayLength  = fields.length - 1;
+      String name      = fields[0];
+      float[] size     = new float[sizeArrayLength];
+      size             = makeDataArray(fields);
+      layers[i]        = new Layer(name, size);
     }
 
     return layers;
   }
 
-  protected float[] makeRandomArray(int n) {
-    float[] x = new float[n];
-
-    // add a handful of random bumps
-    for (int i=0; i<5; i++) {
-      addRandomBump(x);
+  protected float[] makeDataArray(String[] a) {
+    float[] x = new float[a.length - 1];
+    for (int i = 1; i < a.length; i++) {
+      x[i-1] = Float.valueOf(a[i].trim()).floatValue();
     }
-
     return x;
-  }
-
-  protected void addRandomBump(float[] x) {
-    float height  = 1 / rnd.nextFloat();
-    float cx      = (float)(2 * rnd.nextFloat() - 0.5);
-    float r       = rnd.nextFloat() / 10;
-
-    for (int i = 0; i < x.length; i++) {
-      float a = (i / (float)x.length - cx) / r;
-      x[i] += height * Math.exp(-a * a);
-    }
   }
 
 }
