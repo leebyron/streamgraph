@@ -71,8 +71,8 @@ void setup() {
 
   // give report
   long layoutTime = System.currentTimeMillis()-time;
-  int numLayers = layers.length;
-  int layerSize = layers[0].size.length;
+  numLayers = layers.length;
+  layerSize = layers[0].size.length;
   println("Data has " + numLayers + " layers, each with " +
     layerSize + " datapoints.");
   println("Layout Method: " + layout.getName());

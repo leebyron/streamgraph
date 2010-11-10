@@ -20,13 +20,13 @@ public class CSVDataSource implements DataSource {
     data = parent.loadStrings(filename);
   }
 
-  public Layer[] make(int numLayers, int sizeArrayLength) {
-    numLayers = data.length;
+  public Layer[] make(int a, int b) {
+    int numLayers = data.length;
     Layer[] layers = new Layer[numLayers];
 
     for (int i = 0; i < numLayers; i++) {
       String[] fields  = data[i].split(",");
-      sizeArrayLength  = fields.length - 1;
+      int sizeArrayLength  = fields.length - 1;
       String name      = fields[0];
       float[] size     = new float[sizeArrayLength];
       size             = makeDataArray(fields);
