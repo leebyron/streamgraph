@@ -33,8 +33,9 @@ void setup() {
   noLoop();
 
   // GENERATE DATA
-  data     = new LateOnsetDataSource();
+  //data     = new LateOnsetDataSource();
   //data     = new BelievableDataSource();
+  data     = new CSVDataSource(this, "data/csvdata.csv");
 
   // ORDER DATA
   ordering = new LateOnsetSort();
@@ -70,8 +71,8 @@ void setup() {
 
   // give report
   long layoutTime = System.currentTimeMillis()-time;
-  int numLayers = layers.length;
-  int layerSize = layers[0].size.length;
+  numLayers = layers.length;
+  layerSize = layers[0].size.length;
   println("Data has " + numLayers + " layers, each with " +
     layerSize + " datapoints.");
   println("Layout Method: " + layout.getName());
