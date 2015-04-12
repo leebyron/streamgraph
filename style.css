@@ -1,0 +1,350 @@
+html, body {
+  margin: 0;
+}
+
+body{
+  font-family: georgia, serif;
+  font-size: 12px;
+  min-width: 916px;
+  color: #2A2A2A;
+  max-width: 1016px;
+  margin: 0 auto;
+}
+
+h1{
+  clear: both;
+}
+
+img{
+  border: 0px;
+}
+
+img.standalone{
+  margin-top: 31px;
+}
+
+sup, sub{
+  line-height: 0px;
+}
+
+.left{
+  /*clear: both;*/
+  clear: left;
+  display: block;
+  float: left;
+  margin: 0px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.right{
+  /*clear: both;*/
+  clear: right;
+  display: block;
+  float: right;
+  margin: 0px;
+  margin-right: 18px;
+  margin-left: 10px;
+  margin-bottom: 8px;
+}
+
+.full{
+  clear: both;
+  display: block;
+  margin: 0px;
+  margin-bottom: 8px;
+}
+
+/*
+A unit is 41 px wide
+A gutter is 18px wide
+*/
+
+.unit11{
+  float: left;
+  width: 649px;
+}
+
+.unit10{
+  float: left;
+  width: 590px;
+}
+
+.unit9{
+  float: left;
+  width: 531px;
+}
+
+.unit8{
+  float: left;
+  width: 472px;
+}
+
+.unit7{
+  float: left;
+  width: 413px;
+}
+
+.unit6{
+  float: left;
+  width: 354px;
+}
+
+.unit5{
+  float: left;
+  width: 295px;
+}
+
+.unit4{
+  float: left;
+  width: 236px;
+}
+
+.unit3{
+  float: left;
+  width: 177px;
+}
+
+.unit2{
+  float: left;
+  width: 118px;
+}
+
+.unit1{
+  float: left;
+  width: 59px;
+}
+
+#header{
+  padding-left: 54px;
+}
+
+#logo{
+  padding-left: 10px;
+  margin-top: 52px;
+  float: left;
+  width: 250px;
+}
+
+#navigation{
+  float: left;
+  margin-left: 118px;
+}
+
+#navigation a{
+  display: block;
+  float: left;
+  text-decoration: none;
+  color: black;
+  width: 80px;
+  height: 56px;
+  line-height: 104px;
+  margin-left: 18px;
+  padding: 10px;
+  font-family: "Lucida Sans", verdana, sans-serif;
+  font-size: 13px;
+}
+
+#navigation a:hover{
+  border-bottom: solid 2px #666666;
+}
+
+#navigation a.active{
+  height: 54px;
+  border-bottom: solid 4px #959593;
+}
+
+#navigation a.active:hover{
+  border-bottom: solid 4px #666666;
+}
+
+#content{
+  background-color: #FFFFFF;
+  padding-left: 54px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  /*border-bottom: solid 1px #b5b5b4;*/
+  margin-bottom: 27px;
+}
+
+#footer{
+  padding-top: 10px;
+  height: 41px;
+  clear: both;
+/*  margin-bottom: -10px;*/
+}
+
+#content {
+  clear: both;
+}
+
+#content h1{
+  clear: both;
+  padding: 0px 10px;
+  margin-top: 31px;
+  font-weight: normal;
+  font-size: 16px;
+  width: 95%;
+}
+
+#content p{
+  padding: 0px 10px;
+  line-height: 1.5em;
+  margin-right: 18px;
+}
+
+#content pre{
+  font-size: 10px;
+  font-family: "Lucida Console", Monaco, Courier, monospace;
+  margin: 0px 0px;
+  padding: 10px;
+  background-color: #F6F6F6;
+  color: #0A0A0A;
+  overflow: auto;
+  max-height: 35em;
+}
+
+#content blockquote{
+  font-size: .85em;
+  font-style: italic;
+  line-height: 1.5em;
+  margin: 0px;
+  margin-right: 18px;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-right: 20px;
+  /*background-image: url('../static/images/openquote.png'), url('../static/images/closequote.png');*/
+  background-repeat: no-repeat;
+  background-position: top left, bottom right;
+}
+
+code{
+  background-color: #F6F6F6;
+}
+
+#content a{
+  color: #333333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#content a:hover{
+  color: #d57687;
+  text-decoration: underline;
+}
+
+#content a:hover img{
+  border-bottom: solid 4px #d57687;
+  padding-bottom: 2px;
+  margin-bottom: 2px;
+}
+
+.toshare{
+  margin-bottom: 18px;
+}
+
+.toshare h2{
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0px 10px;
+  margin: 0px;
+}
+
+.toshare h2 > a{
+  color: black;
+}
+
+.toshare p{
+  margin: 0px;
+}
+
+.date{
+  font-size: 10px;
+  color: #f291a1;
+  letter-spacing: 0.15em;
+}
+
+.title{
+  font-weight: bold;
+}
+
+.experience{
+  /*margin-bottom: 23px;*/
+}
+
+.experience span{
+  display: block;
+  padding: 0px 10px;
+  line-height: 150%;
+}
+
+.experience p{
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+.project{
+  float: left;
+  width: 159px;
+  height: 100px;
+  margin-right: 18px;
+}
+
+.project p{
+  margin: 0px;
+}
+
+.project img{
+  margin-top: 2px;
+  margin-bottom: 8px;
+}
+
+/*.project object img{
+  margin: 0px !important;
+}*/
+
+.project object{
+  margin-top: 2px;
+  margin-bottom: 8px;
+}
+
+.project a:hover{
+  text-decoration: none !important;
+}
+
+.project .title{
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+.smallcaps{
+  font-variant: small-caps;
+  letter-spacing: 0.15em;
+  text-transform: lowercase;
+}
+
+.amp{
+  display: inline !important;
+  font-style: italic;
+  font-size: 1.25em;
+  line-height: 0.8em !important;
+  margin-left: -0.95em;
+  color: #f291a1;
+  padding: 0px !important;
+}
+
+.nobullet{
+  list-style: none;
+  line-height: 1.5em;
+  padding: 0px;
+  margin: 0px;
+  padding-left: 10px;
+}
+
+#content h1 a{
+  font-weight: normal;
+}
+
+#content a h1{
+  font-weight: normal;
+}
